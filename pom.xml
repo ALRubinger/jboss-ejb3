@@ -30,6 +30,21 @@
                <autoVersionSubmodules>true</autoVersionSubmodules>
             </configuration>
          </plugin>
+         
+        <!-- Surefire -->
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <configuration>
+            <redirectTestOutputToFile>true</redirectTestOutputToFile>
+            <trimStackTrace>false</trimStackTrace>
+            <printSummary>true</printSummary>
+            <includes>
+              <include>**/*TestCase.java</include>
+              <include>**/*TestSuite.java</include>
+            </includes>
+            <forkMode>always</forkMode>
+          </configuration>
+        </plugin>
       </plugins>
    </build>
 
